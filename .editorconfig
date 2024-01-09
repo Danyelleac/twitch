@@ -1,0 +1,10 @@
+# editorconfig.org
+root = true 
+
+[*] #todo e qualquer arquivo ao iniciar
+indent_style = space #vai usar espaço para identar
+ident_size = 2 #2espaços
+end_of_line = lf #linha final
+charset = utf-8 #codificação
+trim_trailing_Whitespace = true #remover espaços em branco
+insert_final_newline = true #inserir nova linha no final
