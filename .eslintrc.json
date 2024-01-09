@@ -1,3 +1,28 @@
 {
-  "extends": "next/core-web-vitals"
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "next/core-web-vitals",//configurações do next
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "react"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off",//serve para desabilitar a regra de import do react pois no next essa regra não se aplica
+      "react-hooks/rules-of-hooks": "error",//informe o erro para regras de hooks
+      "react-hooks/exhaustive-deps": "warn",//não quero que ele me de erro mas sim um warning
+      "react/prop-types": "off",//a gente esta usando typescript então não precisamos dessa regra
+      "@typescript-eslint/explicit-module-boundary-types": "off"//a gente esta usando typescript então não precisamos dessa regra
+    }
 }
