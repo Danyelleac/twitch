@@ -15,6 +15,16 @@ describe('<Main/>', () => {
     //renderizar o componente (render)
     const { container } = render(<Main />)
     //gerar um arquivo de snapshot
-    expect(container.firstChild).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot() //verifica se o primeiro elemento é igual ao snapshot
+  })
+
+  it('should render the colors correctly', () => {
+    //renderizar o componente (render)
+    const { container } = render(<Main />)
+    //verificar se o background-color está correto
+    expect(container.firstChild).toHaveStyle({
+      //verifica se o primeiro elemento tem o estilo igual ao snapshot
+      'background-color': '#06092b'
+    })
   })
 })
